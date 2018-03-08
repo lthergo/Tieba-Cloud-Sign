@@ -8,7 +8,9 @@ global $m;
 <!-- NAVI -->
 <ul class="nav nav-tabs" id="PageTab">
   <li class="active"><a href="#adminid" data-toggle="tab" onclick="$('#newid2').css('display','none');$('#newid').css('display','none');$('#adminid').css('display','');">管理账号</a></li>
-  <?php if (option::get('bduss_num') != '-1' || ISVIP) { ?><li><a href="#newid" data-toggle="tab" onclick="$('#newid').css('display','');$('#adminid').css('display','none');$('#newid2').css('display','none');">自动绑定</a></li>
+  <?php if (option::get('bduss_num') != '-1' || ISVIP) { ?>
+  <!--  <li><a href="#newid" data-toggle="tab" onclick="$('#newid').css('display','');$('#adminid').css('display','none');$('#newid2').css('display','none');">自动绑定</a></li>
+  -->
   <li><a href="#newid2" data-toggle="tab" onclick="$('#newid2').css('display','');$('#adminid').css('display','none');$('#newid').css('display','none');">手动绑定</a></li><?php } ?>
 </ul>
 <br/>
@@ -179,20 +181,28 @@ global $m;
 </div>
 </form>
 
-<br/><br/><b>以下是贴吧账号手动绑定教程：</b><br/><br/>
+<br/><br/><b>如何获取BUDSS：</b><br/><br/>
 <div class="panel panel-default">
-	<div class="panel-heading" onclick="$('#chrome_bduss').fadeToggle();"><h3 class="panel-title"><span class="glyphicon glyphicon-chevron-down"></span> 点击查看在 Chrome 浏览器下的绑定方法</h3></div>
+   <div class="panel-heading" onclick="$('#third_bduss').fadeToggle();"><h3 class="panel-title"><span class="glyphicon glyphicon-chevron-down"></span>通过第三方获取</h3></div>
+   <div class="panel-body" id="third_bduss" style="display:none">
+   1.丫丫云签到第三方获取<a href="http://qd.yyimg.com/bduss/" target="_blank">http://qd.yyimg.com/bduss/</a>
+   <br/><br/>
+   2.百度贴吧扫码获取<a href="http://qd.yyimg.com/bduss/index/getbduss" target="_blank">http://qd.yyimg.com/bduss/index/getbduss</a>
+   <br/><br/>
+   扫码后请在页面等候片刻
+  </div>
+	<div class="panel-heading" onclick="$('#chrome_bduss').fadeToggle();"><h3 class="panel-title"><span class="glyphicon glyphicon-chevron-down"></span>通过Chrome浏览器获取</h3></div>
 	<div class="panel-body" id="chrome_bduss" style="display:none">
-	    1.使用 Chrome 或 Chromium 内核的浏览器
+	            1.使用 Chrome 或 Chromium 内核的浏览器（如360，傲游，搜狗，猎豹，百度浏览器等）
 		<br/><br/>2.打开百度首页 <a href="http://www.baidu.com" target="_blank">http://www.baidu.com/</a>
-   	    <br/><br/>3.右键，点击 <b>查看网页信息</b>
-		<br/><br/>4.确保已经登录百度，然后点击 <b>显示 Cookie 和网站数据</b>
-		<br/><br/>5.如图，依次展开 <b>passport.baidu.com</b> -> <b>Cookie</b> -> <b>BDUSS</b>
-		<br/><br/><a href="source/doc/baiduid.png" target="_blank"><img src="source/doc/baiduid.png"></a>
+   	<br/><br/>3.点击左上角地址栏的小绿锁标志
+		<br/><br/>4.确保已经登录百度账号，点击正在使用的Cookie
+    <br/><br/><img src="source/doc/bduss1.png">
+		<br/><br/>5.展开baidu.com，找到BDUSS
+		<br/><br/><img src="source/doc/bduss2.png">
 		<br/><br/>6.按下 Ctrl+A 全选，然后复制并输入到上面的表单即可
     <br/><br/>请注意，一旦退出登录，可能导致 BDUSS 失效，因此建议在隐身模式下登录
 	</div>
-</div>
 </div>
 <!-- END PAGE3 -->
 <?php doAction('baiduid'); ?>
