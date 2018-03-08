@@ -26,7 +26,7 @@ if (!defined('DO_NOT_LOAD_UI')) {
 	  </div>
 	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    <ul class="nav navbar-nav">
-	          <li><a href="http://www.stusgame.com" target="_blank">StusGame</a></li>
+	          <li><a href="https://lthergo.com" target="_blank">Muse个人博客</a></li>
 	          <li><a href="https://kenvix.com" target="_blank">Kenvix个人博客</a></li>
 	    </ul>
 	  </div><!-- /.navbar-collapse -->
