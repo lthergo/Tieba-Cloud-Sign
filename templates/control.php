@@ -58,12 +58,7 @@ switch ($i['mode'][0]) {
                     loadhead($pluginfo['plugin']['name'] . ' - 插件管理');
 					require_once SYSTEM_ROOT.'/plugins/'.$plug.'/'.$plug.'_setting.php';
                     echo '<br/><br/><br/>';
-                    if(!empty($pluginfo['plugin']['url']))
-                        echo '<a href="'.$pluginfo['plugin']['url'].'" target="_blank">';
-                    echo $pluginfo['plugin']['name'];
-                    if(!empty($pluginfo['plugin']['url']))
-                        echo '</a>';
-                    echo ' V'.$pluginfo['plugin']['version'].' // 插件作者：<a href="'.$pluginfo['author']['url'].'" target="_blank">'.$pluginfo['author']['author'].'</a><br/>'.SYSTEM_FN.' V'.SYSTEM_VER.' // 程序作者: <a href="https://kenvix.com" target="_blank">Kenvix</a>  &amp; <a href="http://www.mokeyjay.com/" target="_blank">mokeyjay</a> &amp;  <a href="http://fyy1999.lofter.com/" target="_blank">FYY</a> ';
+       
 				} else {
 					echo '<b>插件设置页面不存在</b>';
 				}
